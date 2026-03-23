@@ -20,7 +20,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       whileHover={{ y: -5 }}
       className="group relative h-full"
     >
-      <Link href={`/projects/${project.id}`}>
+      <Link href={`/projects/${project.id}`} prefetch={false}>
         <div className="relative overflow-hidden rounded-lg border border-slate-700 bg-slate-900 p-6 h-full hover:border-slate-600 transition-colors duration-300">
           {/* Content */}
           <div className="relative z-10">
