@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Boxing glove">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#bg)"/>
+  <path d="M40 68c0-14 8-24 22-24h10c6 0 11 5 11 11v9c0 10-8 18-18 18H50c-6 0-10-4-10-10z" fill="#ef4444"/>
+  <rect x="45" y="82" width="28" height="13" rx="5" fill="#991b1b"/>
+  <path d="M58 45v14" stroke="#7f1d1d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M67 45v14" stroke="#7f1d1d" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Tennis ball">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#bg)"/>
+  <circle cx="64" cy="64" r="36" fill="#dcfce7"/>
+  <path d="M46 35c-8 8-12 18-12 29s4 21 12 29" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M82 35c8 8 12 18 12 29s-4 21-12 29" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+</svg>
