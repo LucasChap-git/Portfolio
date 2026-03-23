@@ -20,6 +20,7 @@ const fadeInVariants = {
 };
 
 export default function Home() {
+  const profileBaseRotationDeg = 90;
   const cvPath = '/CV-CHAPON_Lucas.pdf';
   const profileImageRef = useRef<HTMLImageElement | null>(null);
   const profileAnimationRef = useRef<Animation | null>(null);
@@ -123,8 +124,8 @@ export default function Home() {
 
     const animation = profileImage.animate(
       [
-        { transform: 'rotate(0deg)' },
-        { transform: 'rotate(360deg)' },
+        { transform: `rotate(${profileBaseRotationDeg}deg)` },
+        { transform: `rotate(${profileBaseRotationDeg + 360}deg)` },
       ],
       {
         duration: 8000,
@@ -236,7 +237,7 @@ export default function Home() {
                 fetchPriority="high"
                 loading="eager"
                 decoding="async"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer', transform: `rotate(${profileBaseRotationDeg}deg)` }}
               />
             </div>
           </motion.div>
@@ -316,7 +317,7 @@ export default function Home() {
                     width={216}
                     height={216}
                     sizes="216px"
-                    className="w-54 h-54 rounded-full object-cover"
+                    className="w-54 h-54 rounded-full object-cover rotate-90"
                   />
                 </div>
               </div>
