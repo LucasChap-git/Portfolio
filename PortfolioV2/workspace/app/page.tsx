@@ -367,43 +367,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Passions Section */}
-      <Section id="passions">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.h2
-            initial={fadeInVariants.initial}
-            whileInView={fadeInVariants.animate}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-white mb-4 text-center"
-          >
-            Mes Passions
-          </motion.h2>
-
-          <motion.p
-            initial={fadeInVariants.initial}
-            whileInView={fadeInVariants.animate}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-slate-400 mb-12 text-center max-w-2xl mx-auto"
-          >
-            Découvrez mes passions en dehors de l'informatique pour en savoir plus sur moi !
-          </motion.p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {passions.map((passion, index) => (
-              <PassionCard
-                key={passion.id}
-                id={passion.id}
-                title={passion.title}
-                description={passion.description}
-                icon={passion.icon}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* Skills Section */}
       <Section id="skills" className="bg-slate-900/25 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
@@ -498,6 +461,43 @@ export default function Home() {
               Voir tous les projets <ArrowRight size={20} />
             </Link>
           </motion.div>
+        </div>
+      </Section>
+
+      {/* Passions Section */}
+      <Section id="passions">
+        <div className="max-w-6xl mx-auto px-4">
+          <motion.h2
+            initial={fadeInVariants.initial}
+            whileInView={fadeInVariants.animate}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-white mb-4 text-center"
+          >
+            Mes Passions
+          </motion.h2>
+
+          <motion.p
+            initial={fadeInVariants.initial}
+            whileInView={fadeInVariants.animate}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-slate-400 mb-12 text-center max-w-2xl mx-auto"
+          >
+            Découvrez mes passions en dehors de l'informatique pour en savoir plus sur moi !
+          </motion.p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {passions.map((passion, index) => (
+              <PassionCard
+                key={passion.id}
+                id={passion.id}
+                title={passion.title}
+                description={passion.description}
+                icon={passion.icon}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </Section>
 
