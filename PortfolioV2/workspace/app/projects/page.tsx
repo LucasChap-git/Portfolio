@@ -20,6 +20,7 @@ export default function ProjectsPage() {
           >
             <Link
               href="/#projects"
+              prefetch={false}
               className="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors"
             >
               <ArrowLeft size={20} /> Retour

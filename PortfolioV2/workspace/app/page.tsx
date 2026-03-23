@@ -492,6 +492,7 @@ export default function Home() {
           >
             <Link
               href="/projects"
+              prefetch={false}
               className="inline-flex items-center gap-2 px-8 py-4 border border-slate-600 text-slate-300 rounded hover:border-slate-500 hover:text-white transition-colors"
             >
               Voir tous les projets <ArrowRight size={20} />

@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   keywords: ['portfolio', 'développeur', 'frontend', 'react', 'next.js'],
   icons: {
     icon: '/favicon.ico?v=4',
-    shortcut: '/favicon.ico?v=4',
     apple: '/favicon-profile.png?v=4',
   },
 };

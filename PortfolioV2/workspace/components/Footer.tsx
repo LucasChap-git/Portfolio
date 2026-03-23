@@ -55,6 +55,7 @@ export function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
+                    prefetch={false}
                     className="text-slate-400 hover:text-white transition-colors text-sm"
                   >
                     {item.label}
