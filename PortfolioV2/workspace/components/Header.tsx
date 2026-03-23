@@ -37,7 +37,7 @@ export function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo: profile image + name */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" prefetch={false} className="flex items-center gap-3">
           <motion.div whileHover={{ scale: 1.05 }}>
             <Image
               src="/image/Photo_profil.webp"
@@ -45,7 +45,7 @@ export function Header() {
               width={40}
               height={40}
               sizes="40px"
-              className="w-10 h-10 rounded-full object-cover border-2 border-slate-700 rotate-90"
+              className="w-10 h-10 rounded-full object-cover border-2 border-slate-700 -rotate-90"
             />
           </motion.div>
           <motion.div

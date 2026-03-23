@@ -20,7 +20,7 @@ const fadeInVariants = {
 };
 
 export default function Home() {
-  const profileBaseRotationDeg = 90;
+  const profileBaseRotationDeg = -90;
   const cvPath = '/CV-CHAPON_Lucas.pdf';
   const profileImageRef = useRef<HTMLImageElement | null>(null);
   const profileAnimationRef = useRef<Animation | null>(null);
@@ -317,7 +317,7 @@ export default function Home() {
                     width={216}
                     height={216}
                     sizes="216px"
-                    className="w-54 h-54 rounded-full object-cover rotate-90"
+                    className="w-54 h-54 rounded-full object-cover -rotate-90"
                   />
                 </div>
               </div>
@@ -492,6 +492,7 @@ export default function Home() {
           >
             <Link
               href="/projects"
+              prefetch={false}
               className="inline-flex items-center gap-2 px-8 py-4 border border-slate-600 text-slate-300 rounded hover:border-slate-500 hover:text-white transition-colors"
             >
               Voir tous les projets <ArrowRight size={20} />
