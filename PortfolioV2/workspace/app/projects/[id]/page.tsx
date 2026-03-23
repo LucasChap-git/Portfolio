@@ -19,6 +19,7 @@ export default function ProjectPage() {
           <h1 className="text-4xl font-bold text-white mb-4">Projet non trouvé</h1>
           <Link
             href="/projects"
+            prefetch={false}
             className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
           >
             <ArrowLeft size={20} /> Retour aux projets
@@ -41,6 +42,7 @@ export default function ProjectPage() {
           >
             <Link
               href="/projects"
+              prefetch={false}
               className="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors"
             >
               <ArrowLeft size={20} /> Tous les projets
@@ -383,7 +385,7 @@ export default function ProjectPage() {
                     whileHover={{ y: -5 }}
                     className="p-4 rounded-lg border border-purple-500/20 bg-slate-900/50 hover:border-purple-500/50 transition-colors cursor-pointer"
                   >
-                    <Link href={`/projects/${relatedProject.id}`}>
+                    <Link href={`/projects/${relatedProject.id}`} prefetch={false}>
                       <h3 className="text-lg font-bold text-white hover:text-cyan-400 transition-colors">
                         {relatedProject.title}
                       </h3>
