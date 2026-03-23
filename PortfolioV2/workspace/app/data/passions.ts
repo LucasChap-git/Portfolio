@@ -16,13 +16,13 @@ export const passions: Passion[] = [
     id: 'design-ux',
     title: 'Golf',
     description: 'Golfeur du dimanche, j\'apprécie passer mes étés sur les greens, un bon mélange entre nature et sport de précision. Mes plus grandes inspirations dans ce sport sont Rory McIlroy et Tiger Woods.',
-    icon: '/image/passions/golf.jpg',
+    icon: '/image/passions/golf.webp',
   },
   {
     id: 'problem-solving',
     title: 'Padel',
     description: 'Joueur occasionnel, je trouve qu\'il n\'y a rien de mieux que de se défouler sur un terrain de padel entre amis. Cela dit faites attention si vous jouez avec moi, je n\'hésite pas à envoyer des bûches !',
-    icon: '/image/passions/padel.jpg',
+    icon: '/image/passions/padel.webp',
   },
   {
     id: 'learning',
