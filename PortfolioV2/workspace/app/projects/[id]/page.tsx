@@ -93,6 +93,8 @@ export default function ProjectPage() {
                       src={image}
                       alt={`${project.title} - image ${index + 1}`}
                       className="w-full h-72 object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-full h-72 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 flex items-center justify-center px-6">

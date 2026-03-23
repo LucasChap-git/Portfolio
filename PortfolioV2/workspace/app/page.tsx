@@ -225,11 +225,14 @@ export default function Home() {
             <div className="w-38 h-38 mx-auto rounded-full border-2 border-cyan-400 flex items-center justify-center bg-slate-900/50 backdrop-blur-md">
               <img
                 ref={profileImageRef}
-                src="/image/Photo_profil.JPG"
+                src="/image/Photo_profil.webp"
                 alt="CHAPON Lucas"
                 className="w-34 h-34 rounded-full object-cover"
                 onClick={handleProfileImageClick}
                 title="Clique pour accélérer"
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
                 style={{ cursor: 'pointer' }}
               />
             </div>
@@ -305,9 +308,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full blur-2xl opacity-30 animate-pulse" />
                 <div className="relative w-full h-full rounded-full border-4 border-blue-700 flex items-center justify-center bg-slate-900 shadow-lg shadow-blue-700/30">
                   <img
-                    src="/image/Photo_profil.JPG"
+                    src="/image/Photo_profil.webp"
                     alt="Illustration"
                     className="w-54 h-54 rounded-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

@@ -40,8 +40,8 @@ export const projects: Project[] = [
     description:
       '\nLe personnage que l\'on joue nommé Libet est atteint d\'une maladie qui modifie ses sens, métaphore de la maladie d\'Alzheimer. Cette maladie fait que le personnage, peu à peu, n\'est plus capable de reconnaître son entourage, ses environnements. Progressivement Libet va voir se déformer et se transformer les éléments du jeu, qui vont devenir peu à peu méconnaissables.\n\nCe projet a été réalisé dans le cadre d\'un projet de deuxième année de BUT Inforatique, en collaboration avec une équipe de 5 personnes. Le jeu a été développé en C# sous Unity, avec l\'ntégralité de la modélisation 3D réalisée par nos soins sur Blender. Nous avons utilisé Github pour la gestion de projet et Jra pour le suivi des tâches.\n\nCe projet a pour but d\'être publié sur Steam, et nous sommes actuellement en train de travailler sur la finalisation du projet.\n\nProblématique : Comment représenter de manière sensible et réaliste les effets de la maladie d\'Alzheimer dans un jeu vidéo ?',
     detailImages: [
-      '/image/projects/libet/screen_cuisine.png',
-      '/image/projects/libet/capture_ecran.png',
+      '/image/projects/libet/screen_cuisine.webp',
+      '/image/projects/libet/capture_ecran.webp',
     ],
     technologies: ['C#', 'Blender', 'Unity', 'Github', 'Jira'],
     featured: true,

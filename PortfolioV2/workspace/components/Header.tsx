@@ -39,9 +39,11 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <motion.img
             whileHover={{ scale: 1.05 }}
-            src="/image/Photo_profil.JPG"
+            src="/image/Photo_profil.webp"
             alt="CHAPON Lucas"
             className="w-10 h-10 rounded-full object-cover border-2 border-slate-700"
+            loading="lazy"
+            decoding="async"
           />
           <motion.div
             whileHover={{ scale: 1.02 }}
