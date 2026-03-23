@@ -119,11 +119,197 @@ export default function ProjectPage() {
             </p>
           </motion.section>
 
+          {/* Team Section */}
+          {project.team && project.team.length > 0 && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4">Équipe du projet</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {project.team.map((member, index) => (
+                  <motion.div
+                    key={`team-${index}`}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.4 + index * 0.05 }}
+                    className="p-4 rounded-lg bg-slate-900/50 border border-cyan-500/20 hover:border-cyan-500/50 transition-colors"
+                  >
+                    <h3 className="text-lg font-bold text-cyan-400 mb-2">{member.name}</h3>
+                    <p className="text-sm text-gray-400 mb-1">{member.role}</p>
+                    <p className="text-sm text-gray-300">{member.position}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
+          )}
+
+          {/* Missions */}
+          {project.missions && project.missions.length > 0 && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4">Missions principales</h2>
+              <ul className="space-y-3">
+                {project.missions.map((mission, index) => (
+                  <motion.li
+                    key={`mission-${index}`}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.45 + index * 0.05 }}
+                    className="flex gap-3 items-start"
+                  >
+                    <span className="text-cyan-400 font-bold mt-1">•</span>
+                    <span className="text-gray-300">{mission}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.section>
+          )}
+
+          {/* Skills */}
+          {(project.skillsMobilized?.length || project.skillsAcquired?.length) && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl font-bold text-white mb-2">Compétences</h2>
+              <p className="text-sm text-gray-400 mb-5">
+                Les compétences activées pendant le projet et celles consolidées au fil de la production.
+              </p>
+              <div className="grid gap-5 md:grid-cols-2">
+                {project.skillsMobilized && project.skillsMobilized.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.52 }}
+                    className="rounded-2xl border border-emerald-300/25 bg-gradient-to-b from-emerald-500/15 to-emerald-700/5 p-5 shadow-[0_0_0_1px_rgba(16,185,129,0.08)]"
+                  >
+                    <div className="mb-4 flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-emerald-100">Compétences mobilisées</h3>
+                      <span className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-2.5 py-1 text-xs font-medium text-emerald-200">
+                        {project.skillsMobilized.length}
+                      </span>
+                    </div>
+                    <ul className="space-y-2.5">
+                      {project.skillsMobilized.map((skill, index) => (
+                        <li
+                          key={`skill-mobilized-${index}`}
+                          className="flex items-start gap-3 rounded-xl border border-emerald-200/15 bg-emerald-950/20 px-3 py-2 text-emerald-50/95"
+                        >
+                          <span className="mt-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-emerald-300/20 text-[11px] font-bold text-emerald-100">
+                            {index + 1}
+                          </span>
+                          <span className="text-sm leading-relaxed">{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+
+                {project.skillsAcquired && project.skillsAcquired.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.56 }}
+                    className="rounded-2xl border border-cyan-300/25 bg-gradient-to-b from-cyan-500/15 to-cyan-700/5 p-5 shadow-[0_0_0_1px_rgba(34,211,238,0.08)]"
+                  >
+                    <div className="mb-4 flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-cyan-100">Compétences acquises</h3>
+                      <span className="rounded-full border border-cyan-300/30 bg-cyan-400/10 px-2.5 py-1 text-xs font-medium text-cyan-200">
+                        {project.skillsAcquired.length}
+                      </span>
+                    </div>
+                    <ul className="space-y-2.5">
+                      {project.skillsAcquired.map((skill, index) => (
+                        <li
+                          key={`skill-acquired-${index}`}
+                          className="flex items-start gap-3 rounded-xl border border-cyan-200/15 bg-cyan-950/20 px-3 py-2 text-cyan-50/95"
+                        >
+                          <span className="mt-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-cyan-300/20 text-[11px] font-bold text-cyan-100">
+                            {index + 1}
+                          </span>
+                          <span className="text-sm leading-relaxed">{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </div>
+            </motion.section>
+          )}
+
+          {/* PPP */}
+          {project.ppp && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.58 }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4">Lien explicite avec mon projet professionnel</h2>
+              <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+                {project.ppp.objective}
+              </p>
+            </motion.section>
+          )}
+
+          {/* Critical Reflection */}
+          {project.criticalReflection && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4">Regard critique sur l'expérience</h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="rounded-xl border border-amber-300/20 bg-amber-500/10 p-4">
+                  <h3 className="text-base font-semibold text-amber-100 mb-3">Difficultés rencontrées</h3>
+                  <ul className="space-y-2">
+                    {project.criticalReflection.difficulties.map((item, index) => (
+                      <li key={`difficulty-${index}`} className="text-sm text-amber-50/90 leading-relaxed">
+                        • {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-emerald-300/20 bg-emerald-500/10 p-4">
+                  <h3 className="text-base font-semibold text-emerald-100 mb-3">Solutions apportées</h3>
+                  <ul className="space-y-2">
+                    {project.criticalReflection.solutions.map((item, index) => (
+                      <li key={`solution-${index}`} className="text-sm text-emerald-50/90 leading-relaxed">
+                        • {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-cyan-300/20 bg-cyan-500/10 p-4">
+                  <h3 className="text-base font-semibold text-cyan-100 mb-3">Leçons tirées</h3>
+                  <ul className="space-y-2">
+                    {project.criticalReflection.lessons.map((item, index) => (
+                      <li key={`lesson-${index}`} className="text-sm text-cyan-50/90 leading-relaxed">
+                        • {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.section>
+          )}
+
           {/* Technologies */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-12"
           >
             <h2 className="text-2xl font-bold text-white mb-4">Technologies utilisées</h2>
@@ -133,7 +319,7 @@ export default function ProjectPage() {
                   key={tech}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
                   className="px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/40 text-purple-300 font-semibold"
                 >
                   {tech}
@@ -146,7 +332,7 @@ export default function ProjectPage() {
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.65 }}
             className="mb-12"
           >
             <h2 className="text-2xl font-bold text-white mb-4">Accès au projet</h2>
@@ -182,7 +368,7 @@ export default function ProjectPage() {
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
           >
             <h2 className="text-2xl font-bold text-white mb-4">Autres projets</h2>
             <div className="grid md:grid-cols-2 gap-4">
