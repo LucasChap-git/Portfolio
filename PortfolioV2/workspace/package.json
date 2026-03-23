@@ -2,7 +2,7 @@
   "name": "workspace",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lucaschap-git.github.io/Portfolio/",
+  "homepage": ".",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
