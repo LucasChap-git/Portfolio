@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { projects } from '@/app/data/projects';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProjectPage() {
   const params = useParams();
@@ -91,12 +92,13 @@ export default function ProjectPage() {
                   className="rounded-xl overflow-hidden border border-purple-500/20 bg-slate-900/50"
                 >
                   {image ? (
-                    <img
+                    <Image
                       src={image}
                       alt={`${project.title} - image ${index + 1}`}
+                      width={1280}
+                      height={720}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="w-full h-72 object-cover"
-                      loading="lazy"
-                      decoding="async"
                     />
                   ) : (
                     <div className="w-full h-72 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 flex items-center justify-center px-6">

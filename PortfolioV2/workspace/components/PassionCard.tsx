@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface PassionCardProps {
   id: string;
@@ -27,11 +28,13 @@ export function PassionCard({ title, description, icon, index }: PassionCardProp
         <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
           {isImageIcon ? (
             <div className="w-16 h-16 rounded-full border-2 border-cyan-400 flex items-center justify-center bg-slate-900/50 backdrop-blur-md shadow-[0_0_24px_rgba(34,211,238,0.16)]">
-              <img
+              <Image
                 src={icon}
                 alt={title}
+                width={56}
+                height={56}
+                sizes="56px"
                 className="w-14 h-14 rounded-full object-cover"
-                loading="lazy"
               />
             </div>
           ) : (

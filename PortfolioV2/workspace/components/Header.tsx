@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,14 +38,16 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo: profile image + name */}
         <Link href="/" className="flex items-center gap-3">
-          <motion.img
-            whileHover={{ scale: 1.05 }}
-            src="/image/Photo_profil.webp"
-            alt="CHAPON Lucas"
-            className="w-10 h-10 rounded-full object-cover border-2 border-slate-700"
-            loading="lazy"
-            decoding="async"
-          />
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Image
+              src="/image/Photo_profil.webp"
+              alt="CHAPON Lucas"
+              width={40}
+              height={40}
+              sizes="40px"
+              className="w-10 h-10 rounded-full object-cover border-2 border-slate-700"
+            />
+          </motion.div>
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="text-sm font-semibold text-white tracking-tight"

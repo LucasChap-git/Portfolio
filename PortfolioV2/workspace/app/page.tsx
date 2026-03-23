@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, ArrowRight, Download, FileText } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Section } from '@/components/Section';
 import { GlowBadge } from '@/components/GlowBadge';
 import { ProjectCard } from '@/components/ProjectCard';
@@ -227,6 +228,8 @@ export default function Home() {
                 ref={profileImageRef}
                 src="/image/Photo_profil.webp"
                 alt="CHAPON Lucas"
+                width={136}
+                height={136}
                 className="w-34 h-34 rounded-full object-cover"
                 onClick={handleProfileImageClick}
                 title="Clique pour accélérer"
@@ -307,12 +310,13 @@ export default function Home() {
               <div className="relative w-58 h-58 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full blur-2xl opacity-30 animate-pulse" />
                 <div className="relative w-full h-full rounded-full border-4 border-blue-700 flex items-center justify-center bg-slate-900 shadow-lg shadow-blue-700/30">
-                  <img
+                  <Image
                     src="/image/Photo_profil.webp"
                     alt="Illustration"
+                    width={216}
+                    height={216}
+                    sizes="216px"
                     className="w-54 h-54 rounded-full object-cover"
-                    loading="lazy"
-                    decoding="async"
                   />
                 </div>
               </div>
@@ -611,6 +615,7 @@ export default function Home() {
                     src={cvPath}
                     title="CV Lucas Chapon"
                     className="w-full h-[520px]"
+                    loading="lazy"
                   />
                 </div>
 
